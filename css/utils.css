@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color: #ffb200;
+  --accent-color: #ffd900;
+  --theme-color: #fddd27;
+
+  --bg-light: #f9f8f8;
+  --bg-white: #fff;
+
+  --text-color-heading: #333;
+  --text-color-content: #666;
+
+  --font-inter: "Inter", sans-serif;
+  --font-sys-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --z-index-100: 100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  block-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+  color: var(--text-color-content);
+  background-color: var(--bg-white);
+  font-family: var(--font-inter);
+  line-block-size: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  min-block-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  inline-size: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: var(--text-color-content);
+  text-decoration: none;
+}
+
+
+.container {
+  max-inline-size: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  inline-size: 100%;
+  max-inline-size: 100vw;
+}
+
+.flex {
+  block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.grid {
+  block-size: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: .8rem 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: .56rem;
+  color: var(--text-color-content);
+  background-color: var(--theme-color);
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: var(--accent-color);
+}
+
+.card {
+  color: var(--text-color-content);
+  background-color: var(--bg-white);
+  border-radius: .68rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 1.2rem;
+  margin: 1.2rem 0;
+  inline-size: 100%;
+}
+
+.card .header h3 {
+  margin-bottom: 0;
+  letter-spacing: normal;
+  color: var(--text-color-heading);
+  font-weight: bold;
+}
+
+.card .content p {
+  margin-top: 0;
+  color: var(--text-color-content);
+  font-weight: bold;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.form-control input,
+.form-control button {
+  border: none;
+  border-radius: .2rem;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline: none;
+}
+
+.form-control button i {
+  font-weight: bold;
+}
+
+
+@media screen and (max-inline-size: 600px) {
+  html:before {
+    content: "Sorry, this system is only accessible on larger screens. Please use a device with a larger screen for a better experience.";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #e9e7e7;
+    background-color: rgb(49, 49, 49);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid black;
+  }
+
+
+  body {
+    display: none;
+  }
+}

@@ -1,0 +1,299 @@
+/* Default styles for mobile */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  block-size: 100%;
+  inline-size: 24%;
+  background-color: #fff;
+  padding-inline: 1rem;
+}
+
+.sidebar-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  block-size: 100%;
+  inline-size: 24%;
+  background-color: #f3f3f3;
+  padding-inline: 1rem;
+}
+
+.sidebar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .6rem .4rem;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.sidebar-logo .logo {
+  block-size: 3.4rem;
+  inline-size: 3.4rem;
+}
+
+.sidebar-logo span {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.sidebar-menus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  block-size: 100%;
+}
+
+.sidebar-menu .menu-item {
+  min-inline-size: 100%;
+  padding: 0;
+  cursor: pointer;
+  border-radius: .6rem;
+  transition: all .1s;
+}
+
+.sidebar-menu .menu-item > a > span {
+  padding: .8rem 1.4rem;
+  margin-block-start: .6rem;
+  font-weight: 500;
+}
+
+.sidebar-menu .menu-item.active {
+  background-color: var(--bg-light);
+}
+
+.sidebar-menu .menu-item:hover {
+  background-color: var(--bg-light);
+  opacity: .8;
+}
+
+.menu-item .flex {
+  justify-content: space-between;
+  gap: .8rem;
+}
+
+.menu-item .icon {
+  block-size: 24px;
+  inline-size: 24px;
+}
+
+.navbar {
+  background-color: #fff;
+  justify-content: space-between;
+  padding: .4rem .8rem;
+  border-block-end: 1px solid #e1e1e1;
+}
+
+.navbar-nav {
+  padding-block: .6rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.navbar-nav-items {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.4rem;
+  inline-size: 100%;
+}
+
+.navbar-nav-profile-avatar {
+  color: #f3f3f3;
+  padding: .2rem .2rem;
+  border-radius: 100%;
+  inline-size: 42px;
+  block-size: 42px;
+  border: 1px dotted #acabab;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+.main {
+  inline-size: 100%;
+  display: flex;
+  block-size: 100vh;
+}
+
+.content {
+  overflow: auto;
+  inline-size: 100%;
+  position: relative;
+}
+
+.data-section {
+  padding-block: 1.2rem;
+}
+
+.data-section-title h1 {
+  margin-block-end: .6rem;
+}
+
+
+.settings-card {
+  background-color: #ffffff;
+  padding-block: 1rem;
+  box-shadow: 0px 3px 3px -1px rgba(10,22,70,.1), 0px 0px 1px 0px rgba(10,22,70,.06) !important;
+  background-clip: border-box;
+  border: 1px solid #eceef3;
+  border-radius: 0.75rem;
+  margin-block-start: .6rem;
+}
+
+.settings-card .card-header {
+  padding-inline:  1.6rem;
+  padding-block-end: 1rem;
+  margin-block: .6rem;
+  border-block-end: 1px solid #efefef;
+  font-weight: normal !important;
+  font-size: 19px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: #6d6c6c;
+}
+
+.settings-card-body {
+  padding-inline:  1.6rem;
+}
+
+.settings-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.settings-checkbox input[type="checkbox"] {
+  block-size: 2.2rem;
+}
+
+.settings-checkbox input[type="checkbox"].switch {
+  overflow: hidden;
+  border: 0;
+  border-radius: 3rem;
+  inline-size: 3.8rem;
+  appearance: none;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin: 0;
+  position: relative;
+  border: 1px solid #d1d5db;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+.settings-checkbox input[type="checkbox"].switch:before {
+  content: "";
+  inline-size: 1.6rem;
+  block-size: 1.6rem;
+  transform: translatex(0);
+  position: absolute;
+  border-radius: 50%;
+  margin: 0 0.28rem;
+  background: #d1d5db;
+  transition: 0.2s ease-in;
+}
+
+.settings-checkbox input[type="checkbox"].switch:checked {
+  background: #ffb200;
+  border-color: #ffb200;
+}
+
+.settings-checkbox input[type="checkbox"].switch:checked:before {
+  transform: translatex(100%);
+  background: #fff;
+}
+
+.settings-checkbox label {
+  cursor: pointer;
+  color: #a3a4a7;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  margin: 0 0 0 1.25rem;
+  font-size: 1rem;
+}
+
+
+
+/* Media query for tablets (landscape and portrait) */
+@media only screen and (min-width: 600px) {
+  /* Tablet styles here */
+}
+
+/* Media query for smartphones (portrait) */
+@media only screen and (max-width: 599px) {
+  /* Smartphone styles here */
+  .container {
+    padding: 0;
+  }
+
+  .main {
+    display: relative;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar-mobile {
+    inline-size: 60%;
+    position: absolute;
+    z-index: var(--z-index-100);
+  }
+
+  .sidebar-mobile .sidebar-logo {
+    padding-inline: 0;
+    margin-block: .6rem;
+  }
+
+  .sidebar-mobile .sidebar-logo .logo {
+    block-size: 2rem;
+    inline-size: 2rem;
+  }
+
+  .sidebar-mobile .sidebar-logo span {
+    font-size: 1.8rem;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: block;
+  }
+
+  .navbar-mobile .navbar-nav {
+    justify-content: space-between;
+    gap: .4rem;
+    padding: .6rem;
+  }
+
+  .navbar-mobile .navbar-nav .sidebar-logo .logo {
+    block-size: 2rem;
+    inline-size: 2rem;
+  }
+
+  .navbar-mobile .navbar-nav .sidebar-logo span {
+    font-size: 1.8rem;
+  }
+
+  .navbar-mobile .avatar-and-toggler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .navbar-mobile .navbar-mobile-toggler {
+    block-size: 2rem;
+    inline-size: 2rem;
+  }
+}
