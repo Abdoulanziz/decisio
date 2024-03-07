@@ -202,8 +202,8 @@
 }
 
 .settings-checkbox input[type="checkbox"].switch:checked {
-  background: #ffb200;
-  border-color: #ffb200;
+  background: #fbf1b8;
+  border-color: #fbf1b8;
 }
 
 .settings-checkbox input[type="checkbox"].switch:checked:before {
@@ -218,6 +218,113 @@
   font-weight: 400;
   margin: 0 0 0 1.25rem;
   font-size: 1rem;
+}
+
+.content-inner {
+  padding-block: 1rem;
+}
+
+.home-content-header {
+  margin-block-end: 1.4rem;
+}
+
+.home-content-header .welcome-content p {
+  font-size: 1.4rem;
+  margin-block-end: .6rem;
+}
+
+.home-content-header .welcome-content p {
+  font-size: 1.6rem;
+}
+
+.home-content-banner .banner-content {
+  border: 1px solid #fbf1b8;
+  border-radius: .8rem;
+  block-size: 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 2.4rem;
+  background-color: #fbf1b8;
+}
+
+.home-content-banner .banner-content h3 {
+  margin-block-end: .6rem;
+}
+
+.home-content-banner .banner-content p {
+  margin-block-end: 1.5rem;
+  inline-size: 34rem;
+  text-align: center;
+}
+
+.home-content-banner .banner-content-ctas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+}
+
+.home-content-banner .banner-content-ctas .btn {
+  background-color: var(--accent-color);
+}
+
+.home-get-started-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.4rem;
+  margin-block-start: 2rem;
+}
+
+.home-get-started-cards .card-content {
+  inline-size: 33%;
+  block-size: 14rem;
+  border: 1px solid #fbf1b8;
+  border-radius: .6rem;
+  padding: 1.2rem;
+}
+
+.home-get-started-cards .card-content .card-icon svg {
+  background-color: #fbf1b8;
+  border-radius: 50%;
+  padding: .8rem;
+  block-size: 3.2rem;
+  inline-size: 3.2rem;
+}
+
+.home-get-started-cards .card-content .title {
+  color: var(--text-color-content);
+  font-weight: bold;
+}
+
+.home-get-started-cards .card-content.border-dashed {
+  border: 2.4px dotted #fbf1b8;
+}
+
+.home-get-started-cards .card-content.border-dashed .card-text .title {
+  margin-block-end: .8rem;
+}
+
+.home-get-started-cards .card-content.border-dashed .card-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  block-size: 100%;
+}
+
+.home-get-started-cards .card-content-tutorials .card-content-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.home-get-started-cards .card-content-examples .card-content-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 
@@ -295,5 +402,28 @@
   .navbar-mobile .navbar-mobile-toggler {
     block-size: 2rem;
     inline-size: 2rem;
+  }
+
+  .content-inner {
+    padding: 1rem;
+  }
+
+  .home-content-banner .banner-content p {
+    margin-block-end: 1.5rem;
+    inline-size: unset;
+  }
+
+  .home-get-started-cards {
+    display: block;
+    margin-block-start: 2rem;
+  }
+
+  .home-get-started-cards .card-content {
+    inline-size: 100%;
+    block-size: 14rem;
+    border: 1px solid #fbf1b8;
+    border-radius: .6rem;
+    padding: 1.2rem;
+    margin-block-end: 1.2rem;
   }
 }
