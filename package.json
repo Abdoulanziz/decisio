@@ -1,0 +1,18 @@
+{
+  "name": "decesio",
+  "version": "1.0.0",
+  "description": "Empower Your Growth with Decesio: Your Personal and Professional Development Hub",
+  "main": "app.js",
+  "author": "Abdoulanziz Ally <abdoulanzizally@coire.live> (https://coire.live)",
+  "license": "ISC",
+  "dependencies": {
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.0.3",
+    "pg": "^8.11.3",
+    "sequelize": "^6.33.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.1"
+  }
+}
