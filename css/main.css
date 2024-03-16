@@ -300,6 +300,7 @@
   margin-block-end: .68rem;
 }
 
+.auth-container select,
 .auth-container input[type="text"],
 .auth-container input[type="email"],
 .auth-container input[type="password"],
@@ -311,6 +312,7 @@
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: .2rem;
+  background-color: #fff;
 }
 
 .auth-container input[type="text"]:focus,
