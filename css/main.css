@@ -105,16 +105,16 @@
 }
 
 .navbar-nav-link {
-  color: #7d7c7c;
+  color: #cbcaca;
   font-weight: 600;
 }
 
 .navbar-nav-link.active {
-  color: #cbcaca;
+  color: #dddddd;
 }
 
 .navbar-nav-link:hover {
-  color: #cbcaca;
+  color: #dddddd;
 }
 
 .navbar-nav-profile-avatar {
