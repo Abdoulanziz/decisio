@@ -306,7 +306,8 @@
 .auth-container button {
   inline-size: 100%;
   margin-block-end: .8rem;
-  padding: .8rem 2rem;
+  padding: .8rem;
+  font-size: 1rem;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: .2rem;
@@ -366,8 +367,51 @@
   color: #fff;
 }
 
+.explore-content {
+  border-block-end: 1px solid #9f9e9e;
+  padding: 0;
+}
 
 
+.explore-content .large-header {
+  position: relative;
+  inline-size: 100%;
+  background: #111;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+
+.explore-content .large-header {
+  background-color: #000000;
+}
+
+.explore-content .main-title {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #F9F1E9;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.explore-content .main-title {
+  text-transform: uppercase;
+  font-size: 3.2em;
+  letter-spacing: 0.1em;
+}
+
+.explore-content .main-title .thin {
+  font-weight: 200;
+}
+
+@media only screen and (max-width: 768px) {
+  
+}
 
 
 
@@ -839,6 +883,10 @@
     border-radius: .6rem;
     padding: 1.2rem;
     margin-block-end: 1.2rem;
+  }
+
+  .explore-content .main-title {
+    font-size: 3em;
   }
 
   .features-content {
