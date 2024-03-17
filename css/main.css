@@ -89,6 +89,10 @@
   border-block-end: 1px solid #e1e1e1;
 }
 
+.navbar.navbar-authen {
+  padding-block: .8rem;
+}
+
 .navbar-nav {
   display: flex;
   justify-content: flex-end;
