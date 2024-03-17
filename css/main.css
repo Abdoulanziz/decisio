@@ -530,12 +530,8 @@
 }
 
 .home-content-header .welcome-content p {
-  font-size: 1.4rem;
-  margin-block-end: .6rem;
-}
-
-.home-content-header .welcome-content p {
   font-size: 1.6rem;
+  margin-block-end: .6rem;
 }
 
 .home-content-banner .banner-content {
@@ -580,7 +576,7 @@
 }
 
 .home-get-started-cards .card-content {
-  inline-size: 33%;
+  flex: 1;
   block-size: 14rem;
   border: 1px solid #fbf1b8;
   border-radius: .6rem;
@@ -627,6 +623,52 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
+.explore-content {
+  border: none;
+}
+
+.explore-content-header {
+  margin-block-end: 1.4rem;
+}
+
+.explore-content-header .welcome-content p {
+  font-size: 1.6rem;
+  margin-block-end: .6rem;
+}
+
+.explore-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-block-start: .8rem;
+}
+
+.explore-cards .card-content {
+  block-size: 14rem;
+  border: 1px solid #fbf1b8;
+  border-radius: .6rem;
+  padding: 1.2rem;
+}
+
+.explore-cards .card-content .card-icon svg {
+  background-color: #fbf1b8;
+  border-radius: 50%;
+  padding: .8rem;
+  block-size: 3.2rem;
+  inline-size: 3.2rem;
+}
+
+.explore-cards .card-content .title {
+  color: var(--text-color-content);
+  font-weight: bold;
+}
+
+
+
+
+
+
 
 
 .profile-content {
@@ -1170,6 +1212,20 @@
 
   .account-settings-form .form-group-flex {
     display: block;
+  }
+
+  .explore-cards {
+    display: block;
+    margin-block: .8rem;
+  }
+
+  .explore-cards .card-content {
+    inline-size: 100%;
+    block-size: 14rem;
+    border: 1px solid #fbf1b8;
+    border-radius: .6rem;
+    padding: 1.2rem;
+    margin-block-end: 1.2rem;
   }
 
 
