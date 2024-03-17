@@ -27,14 +27,14 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="#">
+                            <a href="index.html#features-container">
                                 <span class="flex">
                                     <span class="flex"><span class="">Features</span></span>
                                 </span>
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="#">
+                            <a href="index.html#explore-content">
                                 <span class="flex">
                                     <span class="flex"><span class="">Explore</span></span>
                                 </span>
@@ -67,8 +67,8 @@
                     </div>
                     <ul class="navbar-nav-items">
                         <li class="navbar-nav-item"><a class="navbar-nav-link" href="index.html">Home</a></li>
-                        <li class="navbar-nav-item"><a class="navbar-nav-link" href="#">Features</a></li>
-                        <li class="navbar-nav-item"><a class="navbar-nav-link" href="#">Explore</a></li>
+                        <li class="navbar-nav-item"><a class="navbar-nav-link" href="index.html#features-container">Features</a></li>
+                        <li class="navbar-nav-item"><a class="navbar-nav-link" href="index.html#explore-content">Explore</a></li>
                         <li class="navbar-nav-item"><a class="navbar-nav-link" href="signin.html">Login</a></li>
                     </ul>
                     <a class="btn" href="signup.html">Signup</a>
@@ -108,9 +108,16 @@
                             <input type="email" id="email" name="email" required>
                             
                             <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" required>
+                            <div class="password-input-container">
+                                <input type="password" id="password" name="password" required>
+                                <span class="toggle-password" onclick="togglePasswordVisibility(this)"></span>
+                            </div>
                             
+                            <label for="password-confirm">Confirm Password:</label>
+                            <input type="password" id="password-confirm" name="passwordConfirm" required>
+
                             <button type="submit">Sign Up</button>
+                            <a href="signin.html" class="signup-link">Have an account? Sign in</a>
                         </form>
                         <p class="signup-using-label">Or Signup with:</p>
                         <div class="social-media">
@@ -175,6 +182,20 @@
         </div>
 
     <script src="js/main.js"></script>
+
+    <script>
+        function togglePasswordVisibility(icon) {
+            var passwordInput = document.getElementById('password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.style.backgroundImage = 'url(img/pwd-icons/visible.png)';
+            } else {
+                passwordInput.type = 'password';
+                icon.style.backgroundImage = 'url(img/pwd-icons/hide.png)';
+            }
+        }
+
+    </script>
 
 </body>
 </html>

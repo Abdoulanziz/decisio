@@ -153,6 +153,28 @@ a {
   font-weight: bold;
 }
 
+.password-input-container {
+  position: relative;
+  display: inline-block;
+  inline-size: 100%;
+}
+
+.password-input-container input {
+  padding-inline-end: 30px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 42%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  inline-size: 20px;
+  block-size: 20px;
+  background-image: url('../img/pwd-icons/hide.png');
+  background-size: contain;
+}
+
 
 @media screen and (max-inline-size: 600px) {
   html:before {
