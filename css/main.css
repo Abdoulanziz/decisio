@@ -93,6 +93,10 @@
   padding-block: .8rem;
 }
 
+.navbar.navbar-authen .navbar-nav {
+  gap: .8rem !important;
+}
+
 .navbar-nav {
   display: flex;
   justify-content: flex-end;
@@ -119,6 +123,13 @@
 
 .navbar-nav-link:hover {
   color: #dddddd;
+}
+
+.navbar-nav-notification-icon {
+  padding: .2rem;
+  border-radius: 100%;
+  inline-size: 34px;
+  block-size: 34px;
 }
 
 .navbar-nav-profile-avatar {
@@ -415,10 +426,6 @@
   font-weight: 200;
 }
 
-@media only screen and (max-width: 768px) {
-  
-}
-
 
 
 
@@ -496,8 +503,8 @@
 }
 
 .settings-checkbox input[type="checkbox"].switch:checked {
-  background: #fbf1b8;
-  border-color: #fbf1b8;
+  background: #ffd900;
+  border-color: #ffd900;
 }
 
 .settings-checkbox input[type="checkbox"].switch:checked:before {
@@ -620,6 +627,245 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
+
+.profile-content {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.profile-settings {
+  flex: 1;
+  background-color: #ffffff;
+  border-inline-end: 1px solid #eeeded;
+}
+
+.profile-card {
+  background-color: #ffffff;
+  border-block-end: 1px solid #eeeded;
+  padding: .8rem .6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card .card-label {
+  inline-size: 100%;
+  margin-block-start: .8rem;
+}
+
+.profile-card .card-label h3 {
+  text-align: center;
+}
+
+.profile-card .profile-avatar {
+  margin-block-start: 1rem;
+  border: 2px solid #ffd900;
+  border-radius: 100%;
+}
+
+.profile-card .profile-avatar img {
+  inline-size: 78px;
+  block-size: 74px;
+}
+
+.profile-card .profile-text {
+  text-align: center;
+  margin-block-start: .6rem;
+}
+
+.profile-card .profile-text h4 {
+  margin-block-end: .4rem;
+  font-size: 1rem;
+}
+
+.profile-card .profile-text h6 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.profile-card .profile-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  inline-size: 100%;
+  margin-block-start: 1.4rem;
+}
+
+.profile-card .stat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: .4rem 1.2rem;
+  margin-block-start: 1.4rem;
+}
+
+.profile-card .stat-container h1 {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.profile-card .stat-container h6 {
+  font-weight: normal;
+}
+
+.profile-card .stat-container:nth-child(2) {
+  border-inline: 1px solid #f3f3f3;
+}
+
+.profile-card .profile-img-update-cta {
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+  margin-block: 2.8rem 3rem;
+}
+
+.profile-img-update-cta .submit-btn {
+  inline-size: 50%;
+}
+
+.profile-img-update-cta .delete-btn {
+  background-color: #fff;
+  border: 1px solid #ffd900;
+}
+
+.profile-img-update-cta .delete-btn:hover {
+  color: #ffd900;
+}
+
+.profile-desc {
+  background-color: #ffffff;
+  padding: .8rem .6rem;
+}
+
+.profile-desc-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  inline-size: 100%;
+  text-align: center;
+  padding: .6rem 2rem;
+}
+
+.profile-desc-top h3 {
+  margin-block-end: .4rem;
+}
+
+.profile-desc-top h6 {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.profile-desc-mid span {
+  font-weight: normal;
+  font-size: 4rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.personal-settings {
+  flex: 2;
+  inline-size: 100%;
+}
+
+.account-settings {
+  border-block-end: 1px solid #eeeded;
+}
+
+.account-settings-heading {
+  margin: 1.4rem;
+}
+
+.account-settings-form {
+  margin: 0 auto;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  padding: 0 1.4rem 1rem 1.4rem;
+}
+
+.account-settings-form .form-group-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-settings-form .form-group {
+  margin-block-start: 1rem;
+}
+
+.account-settings-form label {
+  display: block;
+  font-weight: normal;
+  margin-block-start: .6rem;
+  margin-block-end: .4rem;
+}
+
+.account-settings-form input[type="text"],
+.account-settings-form textarea {
+  inline-size: 100%;
+  padding: .8rem;
+  border: 1px solid #f1f1f1;
+  border-radius: .4rem;
+  box-sizing: border-box;
+}
+
+.account-settings-form input[type="text"]:focus,
+.account-settings-form textarea:focus {
+  outline: none;
+}
+
+.account-settings-form .textarea-group textarea {
+  block-size: 100px;
+}
+
+.account-settings-form .textarea-group {
+  margin-block-start: 1rem;
+}
+
+.account-settings-form .checkboxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: .6rem;
+}
+
+.account-settings-form .checkbox-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .4rem;
+}
+
+.account-settings-form .button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-block-start: .6rem;
+}
+
+.platform-settings-heading {
+  margin: 1.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .footer {
   background-color: #000;
@@ -912,6 +1158,32 @@
     font-size: 1.2rem;
     margin-block-start: .4rem;
   }
+
+
+  .profile-content {
+    display: block;
+  }
+
+  .account-settings-form .form-group-flex {
+    display: block;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .footer {
     padding-block: 1.2rem;

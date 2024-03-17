@@ -104,7 +104,7 @@
                                 <span class="toggle-password" onclick="togglePasswordVisibility(this)"></span>
                             </div>
                             
-                            <button type="submit">Sign In</button>
+                            <button type="submit" id="signin-btn">Sign In</button>
                             <a href="request.html" class="forgot-password-link">Forgot password?</a>
                         </form>
                         <p class="signin-using-label">Or Signin with:</p>
@@ -183,6 +183,12 @@
                 icon.style.backgroundImage = 'url(img/pwd-icons/hide.png)';
             }
         }
+
+        const signinBtn = document.querySelector("#signin-btn");
+        signinBtn.addEventListener("click", event => {
+            event.preventDefault();
+            location.href = "home.html";
+        })
 
     </script>
 
