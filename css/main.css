@@ -639,7 +639,6 @@
 .profile-settings {
   flex: 1;
   background-color: #ffffff;
-  border-inline-end: 1px solid #eeeded;
 }
 
 .profile-card {
@@ -774,6 +773,7 @@
 .personal-settings {
   flex: 2;
   inline-size: 100%;
+  border-inline-start: 1px solid #eeeded;
 }
 
 .account-settings {
@@ -849,6 +849,10 @@
   justify-content: flex-end;
   align-items: center;
   margin-block-start: .6rem;
+}
+
+.platform-settings {
+  border-block-end: 1px solid #eeeded;
 }
 
 .platform-settings-heading {
