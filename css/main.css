@@ -167,7 +167,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  background-image: url(../img/hero.png);
+  /* background-image: url(../img/hero.png); */
+  background: radial-gradient(circle, rgb(27, 26, 26) 0%, rgb(110, 87, 2) 100%);
   background-size: cover;
   background-position: center;
   block-size: 92vh;
@@ -1092,7 +1093,8 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    background-image: url(../img/hero-mobile.png);
+    /* background-image: url(../img/hero-mobile.png); */
+    background: radial-gradient(circle, rgb(27, 26, 26) 0%, rgb(110, 87, 2) 100%);
     background-size: cover;
     background-position: center;
     block-size: 60vh;
