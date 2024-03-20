@@ -18,4 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   handleScreenSizeChange();
   window.addEventListener('resize', handleScreenSizeChange);
+
+
+
+
+  function togglePostContent() {
+    var postContent = document.querySelector(".post-container-content");
+    postContent.classList.toggle("visible");
+  }
+
+  const postContainerHeader = document.querySelector(".post-container-header");
+  postContainerHeader.addEventListener("click", () => {
+    togglePostContent();
+  });
 });
