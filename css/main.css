@@ -385,6 +385,132 @@
   color: #fff;
 }
 
+
+.home-content {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.home-feeds {
+  flex: 2;
+  background-color: #ffffff;
+}
+
+.post-container {
+  inline-size: 100%;
+  margin: 0 0 1rem 0;
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.post-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f6f7f9;
+  border-bottom: 1px solid #dddfe2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.post-container-header a {
+  color: #365899;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .6rem;
+}
+
+.post-container-header a:hover {
+  cursor: default;
+}
+
+.post-container-header img {
+  inline-size: 22px;
+  block-size: 22px;
+}
+
+.post-container-header p {
+  margin: 0;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.post-container-img-and-textarea {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.post-container-img-and-textarea .img {
+  inline-size: 50px;
+  block-size: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.post-container-img-and-textarea .img img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  border: 1px solid #ffb200;
+  border-radius: 100%;
+}
+
+.post-container-img-and-textarea .textarea {
+  flex: 1;
+}
+
+.post-container-img-and-textarea textarea {
+  inline-size: 100%;
+  min-block-size: 100px;
+  padding: 10px;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  resize: none;
+  font-size: 14px;
+}
+
+.post-container-img-and-textarea textarea:focus {
+  outline: none;
+}
+
+.post-container-ctas {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.post-container-ctas span {
+  inline-size: 20px;
+  block-size: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.post-container-ctas i {
+  margin-left: auto;
+  color: #888;
+}
+
+
+.recent-updates {
+  flex: 1;
+  background-color: #ffffff;
+}
+
 .explore-content {
   border-block-end: 1px solid #9f9e9e;
   padding: 0;
@@ -1214,6 +1340,15 @@
 
   .account-settings-form .form-group-flex {
     display: block;
+  }
+
+  .post-container {
+    padding: 0;
+    border: 0;
+  }
+
+  .recent-updates {
+    display: none;
   }
 
   .explore-cards {
