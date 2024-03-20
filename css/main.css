@@ -412,10 +412,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f6f7f9;
-  border-bottom: 1px solid #dddfe2;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  background-color: #fbfaf9;
+  border-radius: 5px;
   padding: 10px 15px;
   font-size: 14px;
   cursor: pointer;
@@ -514,10 +512,195 @@
   color: #888;
 }
 
+.post-card {
+  border: 1px solid #f6f5f5;
+  border-radius: .4rem;
+  padding: 1rem .8rem;
+  margin-block-end: 1.2rem;
+}
+
+.post-card .post-header {
+  display: flex;
+  align-items: center;
+  margin-block-end: .6rem;
+}
+
+.post-card .user-avatar img {
+  inline-size: 60px;
+  block-size: 60px;
+  border-radius: 50%;
+  margin-inline-end: .6rem;
+  border: 1px solid #ffc107;
+}
+
+.post-card .user-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.post-card .post-time {
+  margin: 0;
+  color: #666;
+  font-size: 12px;
+}
+
+.post-card .post-content {
+  margin-bottom: 10px;
+}
+
+.post-card .post-text {
+  margin: 0;
+}
+
+.post-card .decision-tips {
+  margin-block-start: .6rem;
+  padding-inline-start: 2.8rem;
+}
+
+.post-card .decision-tips li {
+  margin-block-end: .4rem;
+}
+
+.post-card .post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-card .post-stats {
+  display: flex;
+  margin-block-start: 1rem;
+}
+
+.post-card .stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .4rem;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.post-card .stat-number {
+  font-weight: bold;
+}
+
+.post-card .stat-icon {
+  inline-size: 20px;
+  block-size: 20px;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-input {
+  padding: .8rem .6rem;
+  width: 100%;
+  border: 1px solid #f6f5f5;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-button {
+  padding: .8rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffd200;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #ffb900;
+}
+
+.filter-options {
+  margin-block-start: 1rem;
+}
+
+.filter-options label {
+  margin-right: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.search-results {
+  margin-block-start: 1rem;
+  border-top: 1px solid #f6f5f5;
+  padding-top: 10px;
+}
+
 
 .recent-updates {
   flex: 1;
   background-color: #ffffff;
+}
+
+.recent-updates h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.recent-updates .update {
+  border: 1px solid #f6f5f5;
+  border-radius: .4rem;
+  padding: .6rem;
+  margin-block-end: .5rem;
+}
+
+.recent-updates .update-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.recent-updates .update-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.recent-updates .update-info {
+  flex: 1;
+}
+
+.recent-updates .update-user {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.recent-updates .update-time {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.recent-updates .update-content {
+  margin-bottom: 10px;
+}
+
+.recent-updates .update-text {
+  margin: 0;
+}
+
+.recent-updates .update-image {
+  max-width: 100%;
+  border-radius: 5px;
 }
 
 .explore-content {

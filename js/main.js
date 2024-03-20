@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const postContainerHeader = document.querySelector(".post-container-header");
-  postContainerHeader.addEventListener("click", () => {
+  postContainerHeader?.addEventListener("click", () => {
     togglePostContent();
   });
 });
