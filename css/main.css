@@ -18,6 +18,9 @@
   align-items: space-between;
   block-size: 100%;
   inline-size: 24%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
   background-color: #f3f3f3;
   padding-inline: 1rem;
 }
@@ -1407,7 +1410,7 @@
   }
 
   .sidebar-mobile {
-    inline-size: 60%;
+    inline-size: 66%;
     position: absolute;
     z-index: var(--z-index-100);
     background-color: #000;
@@ -1429,7 +1432,7 @@
   }
 
   .sidebar-mobile .sidebar-menu .menu-item {
-    background-color: #3f3f3f;
+    background-color: transparent;
   }
 
   .sidebar-mobile .sidebar-menu .menu-item-label {
