@@ -519,6 +519,10 @@
   margin-block-end: 1.2rem;
 }
 
+.post-card:last-child {
+  margin-block-end: 6rem;
+}
+
 .post-card .post-header {
   display: flex;
   align-items: center;
@@ -1222,6 +1226,67 @@
 
 
 
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  inline-size: 100%;
+  background-color: var(--bg-white);
+  block-size: auto;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.bottom-nav .wrapper.flex {
+  position: relative;
+  justify-content: space-between;
+  padding-block-start: 0;
+}
+
+.bottom-nav .wrapper .items.flex {
+  inline-size: 100% !important;
+  justify-content: space-evenly;
+  background-color: #fff;
+}
+
+.bottom-nav .wrapper .items .item {
+  flex-direction: column;
+  align-items: center;
+  margin: 0.3125em 0;
+  padding: 0.3125em 0.625em;
+  text-decoration: none;
+  color: var(--text-color-secondary);
+}
+
+.bottom-nav .wrapper .items .item .icon {
+  inline-size: 1.6em;
+  block-size: 1.6em;
+}
+
+.bottom-nav .wrapper .items .item.flex.nav-cta {
+  padding-block-start: 0 !important;
+  margin-block-start: 0 !important;
+}
+
+.bottom-nav .wrapper .items .item .cta {
+  padding: .6rem .8rem .3rem .8rem;
+  border-radius: 100%;
+}
+
+.bottom-nav .wrapper .items .item .cta:active {
+  background-color: #f9f9f9;
+  transition-duration: .3s;
+}
+
+.bottom-nav .wrapper .items .item .title {
+  color: var(--text-color-primary);
+  letter-spacing: 0.05rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.bottom-nav .wrapper .items .item .title.active {
+  color: #ffb900;
+}
 
 
 
@@ -1360,6 +1425,19 @@
 
   .sidebar-mobile .sidebar-logo span {
     font-size: 1.8rem;
+    color: #fff;
+  }
+
+  .sidebar-mobile .sidebar-menu .menu-item {
+    background-color: #3f3f3f;
+  }
+
+  .sidebar-mobile .sidebar-menu .menu-item-label {
+    color: #f0f0f0;
+  }
+
+  .sidebar-mobile .sidebar-menu .menu-item:last-child {
+    margin-block-end: .8rem;
   }
 
   .navbar {
@@ -1384,6 +1462,7 @@
 
   .navbar-mobile .navbar-nav .sidebar-logo span {
     font-size: 1.8rem;
+    color: #fff;
   }
 
   .navbar-mobile .avatar-and-toggler {
