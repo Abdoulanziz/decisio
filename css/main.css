@@ -516,7 +516,6 @@
   border: 1px solid #f6f5f5;
   border-radius: .4rem;
   padding: 1rem .8rem;
-  margin-block-end: 1.2rem;
 }
 
 .post-card:last-child {
@@ -1227,6 +1226,7 @@
 
 
 .bottom-nav {
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1477,6 +1477,12 @@
     inline-size: 2rem;
   }
 
+  .bottom-nav {
+    display: block;
+  }
+
+
+
   .content-inner {
     padding: 1rem;
   }
@@ -1633,6 +1639,10 @@
     border: 1px solid #fbf1b8;
     border-radius: .6rem;
     padding: 1.2rem;
+    margin-block-end: 1.2rem;
+  }
+
+  .post-card {
     margin-block-end: 1.2rem;
   }
 
