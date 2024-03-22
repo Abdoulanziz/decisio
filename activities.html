@@ -130,11 +130,25 @@
                             <span>Decesio</span>
                         </div>
                         <div class="avatar-and-toggler">
-                            <img src="img/avatar.png" alt="Profile avatar" class="navbar-nav-profile-avatar">
-                            <img src="img/sidebar-mobile-toggler.svg" alt="Sidebar mobile toggler" class="navbar-mobile-toggler" id="navbar-mobile-toggler">
+                            <img src="img/bell-ring.svg" alt="Notification icon" class="navbar-nav-notification-icon" style="inline-size: 40px;">
+                            <div class="user-avatar dropdown">
+                                <div class="dropdown-avatar flex">
+                                    <img src="img/avatar.png" alt="user avatar" class="avatar navbar-nav-profile-avatar" id="toggle-dropdown">
+                                    <i class="ti-angle-down" id="toggle-dropdown"></i>
+                                </div>
+                                <div class="dropdown-menu" id="dropdown-menu">
+                                    <ul class="dropdown-items">
+                                        <li class="dropdown-item"><a href="home.html">Home</a></li>
+                                        <li class="dropdown-item"><a href="activities.html">Explore</a></li>
+                                        <li class="dropdown-item"><a href="profile.html">Profile</a></li>
+                                        <li class="dropdown-item"><a href="settings.html">Settings</a></li>
+                                        <li class="dropdown-item footer"><img src="img/logout.png" alt=""><a href="signin.html"></a><span>Sign Out</span></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </nav>
-                </div>                  
+                </div>                      
 
                 <!-- Content inner -->
                 <div class="content-inner">

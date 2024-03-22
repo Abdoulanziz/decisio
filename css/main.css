@@ -145,9 +145,9 @@
 }
 
 .navbar-mobile-toggler {
-  border: 1px solid #f3f3f3;
-  border-radius: .3rem;
-  padding: .6rem;
+  /* border: 1px solid #f3f3f3; */
+  /* border-radius: .3rem; */
+  /* padding: .6rem; */
 }
 
 .navbar-mobile {
@@ -1476,13 +1476,14 @@
   }
 
   .navbar-mobile .navbar-mobile-toggler {
-    block-size: 2rem;
-    inline-size: 2rem;
+    block-size: 2.4rem;
+    inline-size: 2.4rem;
   }
 
   .bottom-nav {
     display: block;
   }
+  
 
 
 
@@ -1649,6 +1650,28 @@
     margin-block-end: 1.2rem;
   }
 
+
+
+  .settings-card {
+    margin-inline: .6rem;
+    padding-block: .6rem;
+  }
+
+  .settings-card .card-header {
+    padding-inline:  1rem;
+    padding-block: .6rem;
+    margin-block-start: .2rem;
+    font-size: 1rem;
+  }
+
+  .settings-card-body {
+    padding-inline:  .6rem;
+  }
+
+  .settings-checkbox label {
+    font-size: .96rem;
+    margin-inline-start: .6rem;
+  }
 
 
 
