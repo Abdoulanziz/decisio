@@ -200,17 +200,17 @@
   gap: 1.2rem;
 }
 
-.hero-ctas button {
+.hero-ctas a {
   color: #000;
 }
 
-.hero-ctas button.signin-btn {
+.hero-ctas a.signin-btn {
   background-color: inherit;
   border: 1px solid #ffd200;
   color: #ffd900 !important;
 }
 
-.hero-ctas button.signup-btn:hover {
+.hero-ctas a.signup-btn:hover {
   background-color: inherit;
   border: 1px solid #ffd200;
   color: #ffd900 !important;
@@ -1589,11 +1589,11 @@
     gap: .6rem;
   }
 
-  .hero-ctas button {
+  .hero-ctas a {
     color: #000;
   }
 
-  .hero-ctas button.signin-btn {
+  .hero-ctas a.signin-btn {
     background-color: inherit;
     border: 1px solid #ffd200;
     color: #ffd900 !important;
