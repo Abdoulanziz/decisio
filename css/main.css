@@ -1465,6 +1465,7 @@
 
   .sidebar-mobile .sidebar-menus {
     inline-size: 100%;
+    background-color: #000 !important;
   }
 
   .sidebar-mobile .sidebar-menu .menu-item > a {
