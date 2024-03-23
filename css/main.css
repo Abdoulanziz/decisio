@@ -1473,7 +1473,7 @@
   }
 
   .sidebar-mobile .sidebar-menu .menu-item > a > span.flex {
-    background-color: transparent;
+    background-color: #000;
     border-radius: 0;
     inline-size: 100%;
     padding-inline: 0;
