@@ -192,6 +192,30 @@
   inline-size: 60%;
 }
 
+.hero-ctas {
+  inline-size: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.hero-ctas button {
+  color: #000;
+}
+
+.hero-ctas button.signin-btn {
+  background-color: inherit;
+  border: 1px solid #ffd200;
+  color: #ffd900 !important;
+}
+
+.hero-ctas button.signup-btn:hover {
+  background-color: inherit;
+  border: 1px solid #ffd200;
+  color: #ffd900 !important;
+}
+
 
 
 .features-content {
@@ -417,7 +441,7 @@
 }
 
 .post-container-header a {
-  color: #365899;
+  color: #666;
   text-decoration: none;
   padding: 5px 10px;
   display: flex;
@@ -785,7 +809,9 @@
 }
 
 .settings-checkbox {
+  inline-size: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -1404,10 +1430,22 @@
   }
 
   .sidebar-mobile {
-    inline-size: 66%;
+    inline-size: 100%;
+    block-size: fit-content;
+    padding-block-end: 1.8rem;
     position: absolute;
     z-index: var(--z-index-100);
     background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+
+  .sidebar-mobile .navbar-mobile-toggler-on-menu {
+    inline-size: 40px;
+    block-size: 40px;
   }
 
   .sidebar-mobile .sidebar-logo {
@@ -1425,8 +1463,24 @@
     color: #fff;
   }
 
-  .sidebar-mobile .sidebar-menu .menu-item {
+  .sidebar-mobile .sidebar-menus {
+    inline-size: 100%;
+  }
+
+  .sidebar-mobile .sidebar-menu .menu-item > a {
+    color: #acabab;
+  }
+
+  .sidebar-mobile .sidebar-menu .menu-item > a > span.flex {
     background-color: transparent;
+    border-radius: 0;
+    inline-size: 100%;
+    padding-inline: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 0;
+    border-block-end: 1px solid #313131;
   }
 
   .sidebar-mobile .sidebar-menu .menu-item-label {
@@ -1468,6 +1522,11 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+  }
+
+  .navbar-mobile .navbar-mobile-toggler {
+    inline-size: 40px;
+    block-size: 40px;
   }
 
   .bottom-nav {
@@ -1526,6 +1585,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: .6rem;
+  }
+
+  .hero-ctas button {
+    color: #000;
+  }
+
+  .hero-ctas button.signin-btn {
+    background-color: inherit;
+    border: 1px solid #ffd200;
+    color: #ffd900 !important;
   }
 
 
@@ -1546,7 +1616,8 @@
   .features-items .item .icon {
     background-color: var(--bg-light);
     border-radius: 100%;
-    margin: 1rem;
+    margin: .5rem;
+    padding: 1rem 1.2rem;
   }
 
 
@@ -1638,6 +1709,19 @@
 
   .post-card {
     margin-block-end: 1.2rem;
+  }
+
+  .post-card .post-header img {
+    inline-size: 50px;
+    block-size: 50px;
+  }
+
+  .post-card .decision-tips,
+  .post-card .post-text {
+    font-size: .9rem;
+    line-height: 1.2rem;
+    color: #666;
+    font-family: 'Tilt Neon', Tahoma, Geneva, Verdana, sans-serif;
   }
 
 

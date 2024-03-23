@@ -1,13 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
   const navbarToggler = document.querySelector('#navbar-mobile-toggler');
+  const navbarTogglerOnMenu = document.querySelector('#navbar-mobile-toggler-on-menu');
   const sideNav = document.querySelector('#sidebar-mobile');
 
   function toggleSideNav() {
     sideNav.classList.toggle("d-none");
   }
 
+  function toggleSideNavOnMenu() {
+    sideNav.classList.toggle("d-none");
+  }
+
   if (navbarToggler) {
     navbarToggler.addEventListener('click', toggleSideNav);
+  }
+
+  if (navbarTogglerOnMenu) {
+    navbarTogglerOnMenu.addEventListener('click', toggleSideNavOnMenu);
   }
 
   function handleScreenSizeChange() {
