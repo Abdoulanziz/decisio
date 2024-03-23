@@ -301,14 +301,6 @@ a {
   font-family: var(--font-tilt-neon);
 }
 
-.dropdown-menu .dropdown-items #last-login-label {
-  font-family: var(--font-tilt-neon);
-}
-
-.dropdown-menu .dropdown-items #last-login-value {
-  font-family: var(--font-tilt-neon);
-}
-
 
 @media screen and (max-inline-size: 600px) {
   html:before {
