@@ -10,8 +10,8 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const sequelize = require('../config/database');
 
 
-const { PORT_AUTH_SERVICE, SESSION_SECRET } = process.env;
-const port = PORT_AUTH_SERVICE || "8080";
+const { PORT, SESSION_SECRET } = process.env;
+const port = PORT || "8080";
 
 const initializeAdmin = require(`../middlewares/initializeAdmin`);
 
