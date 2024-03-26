@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '../../.env' });
+require('dotenv').config();
 
 const express = require("express");
 const path = require("path");
@@ -7,7 +7,7 @@ const cors = require("cors");
 
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
-const sequelize = require('../../../config/database');
+const sequelize = require('../config/database');
 
 
 const { PORT_AUTH_SERVICE, SESSION_SECRET } = process.env;
