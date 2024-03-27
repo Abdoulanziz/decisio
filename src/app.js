@@ -70,7 +70,8 @@ sequelize
 
 
 app.use("/", require(`../routes/pageRoutes`));
-app.use("/auth", require(`../routes/authRoutes`));
 app.use("/page", require(`../routes/pageRoutes`));
+app.use("/auth", require(`../routes/authRoutes`));
+app.use("/web", require(`../routes/webRoutes`));
 app.use("/api/v1/", require(`../routes/apiRoutes`));
 app.use("*", (req, res) => res.redirect("/"));

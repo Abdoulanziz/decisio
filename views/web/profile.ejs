@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/utils.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Decesio</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="main">
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-logo">
+                    <img src="/img/logo-dark.svg" alt="" class="logo">
+                    <span>Decesio</span>
+                </div>
+                <div class="sidebar-menus">
+                    <ul class="sidebar-menu">
+                        <li class="menu-item">
+                            <a href="/web/home">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/home.png" alt="" class="icon"><span class="">Home</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item active">
+                            <a href="/web/profile">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/user.png" alt="" class="icon"><span class="">Profile</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/web/activities">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/interface.png" alt="" class="icon"><span class="">Explore</span></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="sidebar-menu">
+                        <li class="menu-item">
+                            <a href="/web/settings">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/settings.png" alt="" class="icon"><span class="">Settings</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="index.html">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/logout.png" alt="" class="icon"><span class="">Signout</span></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar mobile-->
+            <div class="sidebar-mobile d-none" id="sidebar-mobile">
+                <div class="sidebar-logo">
+                    <img src="/img/logo.svg" alt="" class="logo">
+                    <span>Decesio</span>
+                </div>
+                <div class="sidebar-menus">
+                    <ul class="sidebar-menu">
+                        <li class="menu-item">
+                            <a href="/web/home">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/home.svg" alt="" class="icon"><span class="menu-item-label">Home</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item active">
+                            <a href="/web/profile">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/user.svg" alt="" class="icon"><span class="menu-item-label">Profile</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/web/activities">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/interface.svg" alt="" class="icon"><span class="menu-item-label">Explore</span></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="sidebar-menu">
+                        <li class="menu-item">
+                            <a href="/web/settings">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/settings.svg" alt="" class="icon"><span class="menu-item-label">Settings</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="index.html">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/logout.svg" alt="" class="icon"><span class="menu-item-label">Signout</span></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>           
+
+            <!-- Main section -->
+            <div class="content">
+
+                <!-- Navbar -->
+                <div class="navbar navbar-authen">
+                    <nav class="navbar-nav">
+                        <img src="/img/bell-ring.png" alt="Notification icon" class="navbar-nav-notification-icon" style="inline-size: 40px;">
+                        <img src="/img/avatar.png" alt="Profile avatar" class="navbar-nav-profile-avatar">
+                    </nav>
+                </div>
+
+                <!-- Navbar mobile-->
+                <div class="navbar-mobile">
+                    <nav class="navbar-nav">
+                        <div class="sidebar-logo">
+                            <img src="/img/logo.svg" alt="" class="logo">
+                        </div>
+                        <div class="avatar-and-toggler">
+                            <img src="/img/bell-ring.svg" alt="Notification icon" class="navbar-nav-notification-icon" style="inline-size: 40px;">
+                            <div class="user-avatar dropdown">
+                                <div class="dropdown-avatar flex">
+                                    <img src="/img/avatar.png" alt="user avatar" class="avatar navbar-nav-profile-avatar" id="toggle-dropdown">
+                                    <i class="ti-angle-down" id="toggle-dropdown"></i>
+                                </div>
+                                <div class="dropdown-menu" id="dropdown-menu">
+                                    <ul class="dropdown-items">
+                                        <li class="dropdown-item"><a href="/web/home">Home</a></li>
+                                        <li class="dropdown-item"><a href="/web/activities">Explore</a></li>
+                                        <li class="dropdown-item"><a href="/web/profile">Profile</a></li>
+                                        <li class="dropdown-item"><a href="/web/settings">Settings</a></li>
+                                        <li class="dropdown-item footer"><a style="display: flex;justify-content: space-between;align-items: center;" href="signin.html"><img src="/img/logout.png" alt=""><span>Sign Out</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>       
+
+          <!-- Content inner -->
+          <div class="content-inner" style="padding: 0">
+            <div class="profile-content">
+              <div class="profile-settings">
+                <div class="profile-card">
+                  <div class="card-label">
+                    <h3>My Profile</h3>
+                  </div>
+                  <div class="profile-avatar">
+                    <img src="/img/avatar.png" alt="" />
+                  </div>
+                  <div class="profile-text">
+                    <h4>Ally Abdoulanziz</h4>
+                    <h6>abdoulanzizally@outlook.com</h6>
+                  </div>
+                  <div class="profile-stats">
+                    <div class="stat-container">
+                      <h1>86</h1>
+                      <h6>Posts</h6>
+                    </div>
+                    <div class="stat-container">
+                      <h1>2.1k</h1>
+                      <h6>Followers</h6>
+                    </div>
+                    <div class="stat-container">
+                      <h1>12</h1>
+                      <h6>Blogs</h6>
+                    </div>
+                  </div>
+                  <div class="profile-img-update-cta">
+                    <button class="btn submit-btn">Update Picture</button>
+                    <button class="btn submit-btn delete-btn">Delete</button>
+                  </div>
+                </div>
+                <div class="profile-desc">
+                  <div class="profile-desc-wrapper">
+                    <div class="profile-desc-top">
+                      <h3>My slogan</h3>
+                      <h6>Live a life of silent happiness</h6>
+                    </div>
+                    <div class="profile-desc-mid">
+                      <span>&ldquo;</span>
+                    </div>
+                    <div class="profile-desc-bottom">
+                      <p>Decision-making is the compass of life, guiding us through uncertainty, shaping our paths, and defining our destinies.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="personal-settings">
+                <div class="account-settings">
+                  <div class="account-settings-heading">
+                    <h3>Personal Details</h3>
+                  </div>
+                  <form class="account-settings-form">
+                    <div class="form-group-flex">
+                      <div class="form-group">
+                        <label for="first-name">Full Name</label>
+                        <input id="first-name" type="text" />
+                      </div>
+                      <div class="form-group">
+                        <label for="first-name">Occupation</label>
+                        <input id="first-name" type="text" />
+                      </div>
+                      <div class="form-group">
+                        <label for="first-name">Location</label>
+                        <input id="first-name" type="text" />
+                      </div>
+                    </div>
+                    <div class="textarea-group">
+                      <label for="personal-interests">Bio</label>
+                      <textarea id="personal-interests"></textarea>
+                    </div>
+
+                    <div class="button-container">
+                      <button class="btn submit-btn">Save</button>
+                    </div>
+                  </form>
+                </div>
+
+
+                <div class="account-settings">
+                  <div class="account-settings-heading">
+                    <h3>Interests</h3>
+                  </div>
+                  <form class="account-settings-form">
+                    <div class="textarea-group">
+                      <label for="personal-interests">Goals/Objectives</label>
+                      <textarea id="personal-interests"></textarea>
+                    </div>
+                    <div class="textarea-group">
+                      <label for="personal-interests">Collaboration Interests</label>
+                      <textarea id="personal-interests"></textarea>
+                    </div>
+                    <div class="textarea-group">
+                      <label for="personal-interests">Skills & Expertise</label>
+                      <textarea id="personal-interests"></textarea>
+                    </div>
+
+                    <div class="button-container">
+                      <button class="btn submit-btn">Save</button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="account-settings">
+                  <div class="account-settings-heading">
+                    <h3>Skill/Service 1</h3>
+                  </div>
+                  <form class="account-settings-form">
+                    <div class="textarea-group">
+                      <label for="personal-interests">Level of Proficiency / Description</label>
+                      <textarea id="personal-interests"></textarea>
+                    </div>
+
+                    <div class="button-container">
+                      <button class="btn submit-btn">Save</button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="account-settings">
+                  <div class="account-settings-heading">
+                    <h3>Skill/Service 2</h3>
+                  </div>
+                  <form class="account-settings-form">
+                    <div class="textarea-group">
+                      <label for="personal-interests">Level of Proficiency / Description</label>
+                      <textarea id="personal-interests"></textarea>
+                    </div>
+
+                    <div class="button-container">
+                      <button class="btn submit-btn">Save</button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="account-settings">
+                  <div class="account-settings-heading">
+                    <h3>Community Engagement</h3>
+                  </div>
+                  <form class="account-settings-form">
+                    <div class="textarea-group">
+                      <label for="personal-interests">Communication Preferences</label>
+                      <textarea id="personal-interests"></textarea>
+                    </div>
+                    <div class="textarea-group">
+                      <label for="personal-interests">Preferred Collaboration Style</label>
+                      <textarea id="personal-interests"></textarea>
+                    </div>
+
+                    <div class="button-container">
+                      <button class="btn submit-btn">Save</button>
+                    </div>
+                  </form>
+                </div>
+
+
+
+                <div class="platform-settings">
+                  <div class="platform-settings-heading">
+                    <h3>Social Media Links</h3>
+                  </div>
+                  <form class="account-settings-form">
+                    <div class="form-group">
+                      <label for="linkedin">Website (Organization)</label>
+                      <input
+                        id="linkedin"
+                        type="text"
+                        placeholder="E.g. https://www.example.com"
+                      />
+                    </div>
+                    <div class="textarea-group">
+                      <label for="personal-interests">Contact Information</label>
+                      <textarea id="personal-interests"></textarea>
+                    </div>
+
+                    <div class="button-container">
+                      <button class="btn submit-btn">Save</button>
+                    </div>
+                  </form>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

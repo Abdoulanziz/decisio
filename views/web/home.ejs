@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/utils.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Decesio</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="main">
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-logo">
+                    <img src="/img/logo-dark.svg" alt="" class="logo">
+                    <span>Decesio</span>
+                </div>
+                <div class="sidebar-menus">
+                    <ul class="sidebar-menu">
+                        <li class="menu-item active">
+                            <a href="/web/home">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/home.png" alt="" class="icon"><span class="">Home</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/web/profile">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/user.png" alt="" class="icon"><span class="">Profile</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/web/activities">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/interface.png" alt="" class="icon"><span class="">Explore</span></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="sidebar-menu">
+                        <li class="menu-item">
+                            <a href="/web/settings">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/settings.png" alt="" class="icon"><span class="">Settings</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="index.html">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/logout.png" alt="" class="icon"><span class="">Signout</span></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar mobile-->
+            <div class="sidebar-mobile d-none" id="sidebar-mobile">
+                <div class="sidebar-logo">
+                    <img src="/img/logo.svg" alt="" class="logo">
+                    <span>Decesio</span>
+                </div>
+                <div class="sidebar-menus">
+                    <ul class="sidebar-menu">
+                        <li class="menu-item active">
+                            <a href="/web/home">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/home.svg" alt="" class="icon"><span class="menu-item-label">Home</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/web/profile">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/user.svg" alt="" class="icon"><span class="menu-item-label">Profile</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/web/activities">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/interface.svg" alt="" class="icon"><span class="menu-item-label">Explore</span></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="sidebar-menu">
+                        <li class="menu-item">
+                            <a href="/web/settings">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/settings.svg" alt="" class="icon"><span class="menu-item-label">Settings</span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="index.html">
+                                <span class="flex">
+                                    <span class="flex"><img src="/img/logout.svg" alt="" class="icon"><span class="menu-item-label">Signout</span></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>           
+
+            <!-- Main section -->
+            <div class="content">
+
+                <!-- Navbar -->
+                <div class="navbar navbar-authen">
+                    <nav class="navbar-nav">
+                        <img src="/img/bell-ring.png" alt="Notification icon" class="navbar-nav-notification-icon" style="inline-size: 40px;">
+                        <img src="/img/avatar.png" alt="Profile avatar" class="navbar-nav-profile-avatar">
+                    </nav>
+                </div>
+
+                <!-- Navbar mobile-->
+                <div class="navbar-mobile">
+                    <nav class="navbar-nav">
+                        <div class="sidebar-logo">
+                            <img src="/img/logo.svg" alt="" class="logo">
+                        </div>
+                        <div class="avatar-and-toggler">
+                            <img src="/img/bell-ring.svg" alt="Notification icon" class="navbar-nav-notification-icon" style="inline-size: 40px;">
+                            <div class="user-avatar dropdown">
+                                <div class="dropdown-avatar flex">
+                                    <img src="/img/avatar.png" alt="user avatar" class="avatar navbar-nav-profile-avatar" id="toggle-dropdown">
+                                    <i class="ti-angle-down" id="toggle-dropdown"></i>
+                                </div>
+                                <div class="dropdown-menu" id="dropdown-menu">
+                                    <ul class="dropdown-items">
+                                        <li class="dropdown-item"><a href="/web/home">Home</a></li>
+                                        <li class="dropdown-item"><a href="/web/activities">Explore</a></li>
+                                        <li class="dropdown-item"><a href="/web/profile">Profile</a></li>
+                                        <li class="dropdown-item"><a href="/web/settings">Settings</a></li>
+                                        <li class="dropdown-item footer"><a style="display: flex;justify-content: space-between;align-items: center;" href="signin.html"><img src="/img/logout.png" alt=""><span>Sign Out</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>                
+
+                <!-- Content inner -->
+                <div class="content-inner">
+                    <div class="home-content">
+                        <div class="home-feeds">
+                            <div class="post-container">
+                                <div class="post-container-header">
+                                    <a href="#"><img src="/img/edit.svg" alt=""> Share with others</a>
+                                    <p><i class="fa fa-times" aria-hidden="true"></i></p>
+                                </div>
+                                <div class="post-container-content">
+                                    <div class="post-container-img-and-textarea">
+                                        <div class="img">
+                                            <img src="/img/avatar.png">
+                                        </div>
+                                        <div class="textarea">
+                                            <textarea placeholder="What are your thoughts?"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="post-container-ctas">
+                                        <button class="btn submit-btn">Post</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="post-card">
+                                <div class="post-header">
+                                    <div class="user-avatar">
+                                        <img src="/img/avatar.png" alt="User Avatar">
+                                    </div>
+                                    <div class="user-info">
+                                        <h3 class="user-name">Ally Abdoulanziz</h3>
+                                        <p class="post-time">Posted 3 hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-content">
+                                        <p class="post-text">
+                                            Making decisions can be tough, but it's an important skill to master. Here are some tips I have found super helpful:
+                                        </p>
+                                        <ol class="decision-tips">
+                                            <li>Clarify your goals: Understand what you want to achieve before making a decision</li>
+                                            <li>Gather information: Make sure you have all the facts before making a choice</li>
+                                            <li>Consider alternatives: Think about different options and their potential outcomes</li>
+                                            <li>Evaluate risks and benefits: Understand the potential risks and benefits of each option</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="post-stats">
+                                        <div class="stat"><span class="stat-number">24</span> <img src="/img/post-icons/like.svg" alt="" class="stat-icon"></div>
+                                        <div class="stat"><span class="stat-number">12</span>  <img src="/img/post-icons/comment.svg" alt="" class="stat-icon"></div>
+                                        <div class="stat"><span class="stat-number">5</span>  <img src="/img/post-icons/repost.svg" alt="" class="stat-icon"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="post-card">
+                                <div class="post-header">
+                                    <div class="user-avatar">
+                                        <img src="/img/profile-default.png" alt="User Avatar" style="border: 1px solid #ccc;">
+                                    </div>
+                                    <div class="user-info">
+                                        <h3 class="user-name">Peter Kalanzi</h3>
+                                        <p class="post-time">Posted Yesterday</p>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <div class="post-content">
+                                        <p class="post-text">
+                                            Just finished reading a great book on leadership! One key takeaway was the importance of empathy in effective leadership. Empathy helps leaders understand and connect with their team members, leading to better communication, collaboration, and overall team performance. Highly recommend it to anyone looking to improve their leadership skills!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="post-stats">
+                                        <div class="stat"><span class="stat-number">2k</span> <img src="/img/post-icons/like.svg" alt="" class="stat-icon"></div>
+                                        <div class="stat"><span class="stat-number">120</span>  <img src="/img/post-icons/comment.svg" alt="" class="stat-icon"></div>
+                                        <div class="stat"><span class="stat-number">1.1k</span>  <img src="/img/post-icons/repost.svg" alt="" class="stat-icon"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="recent-updates">
+                            <h4>Recent Updates</h4>
+                            <div class="update">
+                                <div class="update-header">
+                                    <div class="update-avatar">
+                                        <img src="/img/profile-default.png" alt="User Avatar">
+                                    </div>
+                                    <div class="update-info">
+                                        <h5 class="update-user">Peter Kalanzi</h5>
+                                        <p class="update-time">2 hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="update-content">
+                                    <p class="update-text">Just launched our new website! Check it out at <a href="#" style="text-decoration: underline;color: #1da1f2;">https://foroden.com</a> and let us know what you think.</p>
+                                </div>
+                            </div>
+                            <div class="update">
+                                <div class="update-header">
+                                    <div class="update-avatar">
+                                        <img src="/img/profile-default.png" alt="User Avatar">
+                                    </div>
+                                    <div class="update-info">
+                                        <h5 class="update-user">Peter Kalanzi</h5>
+                                        <p class="update-time">1 day ago</p>
+                                    </div>
+                                </div>
+                                <div class="update-content">
+                                    <p class="update-text">Excited to announce our new product line! Check out our latest additions.</p>
+                                    <p><a href="#" style="text-decoration: underline;color: #1da1f2;">https://decesio.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+            </div>
+
+            <!-- Bottom navbar -->
+            <div class="bottom-nav" id="bottom-nav">
+                <div class="wrapper flex">
+                    <div class="items flex">
+                        <div class="item flex nav-cta">
+                            <span class="cta"><img class="cta-icon icon" src="/img/home.png" /></span>
+                            <span class="title">Home</span>
+                        </div>
+                        <div class="item flex nav-cta">
+                            <span class="cta"><img class="cta-icon icon" src="/img/user.png" /></span>
+                            <span class="title">Explore</span>
+                        </div>
+                        <div class="item flex nav-cta">
+                            <span class="cta"><img class="cta-icon icon" src="/img/interface.png" /></span>
+                            <span class="title">Networks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
