@@ -8,14 +8,18 @@ const { Role } = require('../models');
 const createAuditLog = require('../middlewares/auditLogger');
 
 
-const renderIndex = (req, res) => {
-  res.render("pages/index");
+const renderSignup = (req, res) => {
+  res.render("auth/signup");
 };
+
+const handleSignup = async (req, res) => {
+  // TODO: logic for signup
+};
+
 
 const renderSignin = (req, res) => {
   res.render("auth/signin");
 };
-
 
 const handleSignin = async (req, res) => {
   const { username, password } = req.body;
@@ -58,6 +62,23 @@ const handleSignin = async (req, res) => {
 };
 
 
+const renderPasswordResetRequest = (req, res) => {
+  res.render("auth/password-reset-request");
+};
+
+const handlePasswordResetRequest = async (req, res) => {
+  // TODO: logic for password reset request
+};
+
+
+const renderPasswordReset = (req, res) => {
+  res.render("auth/password-reset");
+};
+
+const handlePasswordReset = async (req, res) => {
+  // TODO: logic for password reset
+};
+
 
 const handleSignout = (req, res) => {
   req.session.destroy((error) => {
@@ -72,8 +93,17 @@ const handleSignout = (req, res) => {
 };
 
 module.exports = {
-  renderIndex,
+  renderSignup,
+  handleSignup,
+
   renderSignin,
   handleSignin,
+
+  renderPasswordResetRequest,
+  handlePasswordResetRequest,
+
+  renderPasswordReset,
+  handlePasswordReset,
+
   handleSignout,
 };

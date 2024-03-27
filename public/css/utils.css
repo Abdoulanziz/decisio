@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt Neon:wght@100;200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --primary-color: #ffb200;
+  --accent-color: #ffd900;
+  --theme-color: #fddd27;
+
+  --bg-light: #f9f8f8;
+  --bg-white: #fff;
+
+  --text-color-heading: #333;
+  --text-color-content: #666;
+
+  --font-inter: "Inter", sans-serif;
+  --font-sys-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --z-index-100: 100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  block-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+  color: var(--text-color-content);
+  background-color: var(--bg-white);
+  font-family: var(--font-inter);
+  line-block-size: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  min-block-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  inline-size: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: var(--text-color-content);
+  text-decoration: none;
+}
+
+
+.container {
+  max-inline-size: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  inline-size: 100%;
+  max-inline-size: 100vw;
+}
+
+.flex {
+  block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.grid {
+  block-size: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: .8rem 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: .56rem;
+  color: var(--text-color-content);
+  background-color: var(--theme-color);
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: var(--accent-color);
+}
+
+.card {
+  color: var(--text-color-content);
+  background-color: var(--bg-white);
+  border-radius: .68rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 1.2rem;
+  margin: 1.2rem 0;
+  inline-size: 100%;
+}
+
+.card .header h3 {
+  margin-bottom: 0;
+  letter-spacing: normal;
+  color: var(--text-color-heading);
+  font-weight: bold;
+}
+
+.card .content p {
+  margin-top: 0;
+  color: var(--text-color-content);
+  font-weight: bold;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.form-control input,
+.form-control button {
+  border: none;
+  border-radius: .2rem;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline: none;
+}
+
+.form-control button i {
+  font-weight: bold;
+}
+
+.password-input-container {
+  position: relative;
+  display: inline-block;
+  inline-size: 100%;
+}
+
+.password-input-container input {
+  padding-inline-end: 30px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 42%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  inline-size: 20px;
+  block-size: 20px;
+  background-image: url('../img/pwd-icons/hide.png');
+  background-size: contain;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  display: none;
+  z-index: 1000; /* make sure it's above other content */
+}
+
+
+
+
+/* Logout dropdown */
+.dropdown {
+  display: inline;
+  width: fit-content;
+  height: auto;
+  position: relative;
+  z-index: 99999;
+  overflow: visible;
+}
+
+.dropdown-menu {
+  border: none;
+  position: absolute;
+  top: 120%;
+  /* top: -20%; */
+  z-index: 9999;
+  display: none;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, .0975);
+  min-width: 14rem;
+  height: auto;
+  padding: 0 !important;
+  margin: 0;
+  background: #fff;
+  border-radius: 8px;
+  left: 0%;
+  transform: translateX(-80%);
+}
+
+.dropdown-menu .dropdown-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.8em;
+  background: transparent;
+  border-radius: 10px;
+}
+
+.dropdown-menu .dropdown-item.header:first-child {
+  border-block-end: 1px solid #f0efef;
+  padding-block: 8px;
+  color: rgb(92, 92, 92);
+}
+
+.dropdown-menu .dropdown-item.footer:last-child {
+  border-block-start: 1px solid #f0efef;
+  background-color: inherit;
+  margin-block-start: 4rem;
+}
+
+.dropdown-menu .dropdown-items .dropdown-item {
+  margin: unset;
+  height: auto;
+  padding: 8px 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .2rem;
+}
+
+.dropdown-menu .dropdown-items .dropdown-item img {
+  inline-size: 24px;
+  block-size: 24px;
+}
+
+.dropdown-menu .dropdown-items .dropdown-item a {
+  text-decoration: none;
+  color: #404040;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 5px;
+  font-family: inherit;
+}
+
+.dropdown-menu .dropdown-items .dropdown-item:last-child span {
+  color: #000000;
+  font-weight: bolder;
+  font-family: inherit;
+}
+
+.dropdown-menu .dropdown-items .dropdown-item:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dropdown-menu .dropdown-items .dropdown-item:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.dropdown-menu .dropdown-items .dropdown-item:hover i,
+.dropdown-menu .dropdown-items .dropdown-item:hover a {
+    color: rgb(101, 101, 101);
+}
+
+.dropdown-menu .dropdown-items .dropdown-item:hover,
+.dropdown-menu .dropdown-items .dropdown-item:hover {
+    background-color: rgb(243, 243, 243);
+}
+
+.dropdown-menu .dropdown-items .dropdown-item:hover:first-child,
+.dropdown-menu .dropdown-items .dropdown-item:hover:last-child {
+    background-color: transparent;
+}
+
+
+.dropdown-menu .dropdown-items .dropdown-item.header {
+  line-height: normal;
+  font-family: var(--font-tilt-neon);
+}
+
+
+@media screen and (max-inline-size: 600px) {
+  html:before {
+    content: "Sorry, this system is only accessible on larger screens. Please use a device with a larger screen for a better experience.";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #e9e7e7;
+    background-color: rgb(49, 49, 49);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid black;
+  }
+
+
+  body {
+    display: none;
+  }
+}

@@ -11,7 +11,7 @@ const sequelize = require('../config/database');
 
 
 const { PORT, SESSION_SECRET } = process.env;
-const port = PORT || "8080";
+const port = PORT || "5050";
 
 const initializeAdmin = require(`../middlewares/initializeAdmin`);
 
@@ -20,13 +20,12 @@ const app = express();
 app.use(cors());
 
 app.set("view engine", "ejs");
-app.set('views', path.join(__dirname, `views`));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(express.static(path.join(__dirname, `public`)));
-app.use(express.static(path.join(__dirname, `uploads`)));
+app.use(express.static("public"));
+app.use(express.static("uploads"));
 
 
 const sessionStore = new SequelizeStore({
@@ -69,4 +68,9 @@ sequelize
 });
 
 
+
+app.use("/", require(`../routes/pageRoutes`));
+app.use("/auth", require(`../routes/authRoutes`));
+app.use("/page", require(`../routes/pageRoutes`));
 app.use("/api/v1/", require(`../routes/apiRoutes`));
+app.use("*", (req, res) => res.redirect("/"));
