@@ -126,4 +126,62 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 
+
+
+  // Profile img
+  const profileImage = document.querySelector('.profile-avatar img');
+  const updateButton = document.querySelector('.profile-img-update-cta .submit-btn'); // Select update button
+  const deleteButton = document.querySelector('.profile-img-update-cta .delete-btn'); // Select delete button
+
+  // Function to handle image upload (replace with your actual upload logic)
+  function handleImageUpload(event) {
+    // Simulate user interaction for now (replace with actual upload functionality)
+    alert('Image upload functionality not implemented yet!');
+    // You would typically handle file selection, upload to server, and update image src here
+  }
+
+  // Function to handle image deletion with style maintenance
+  function handleImageDelete() {
+    if (confirm('Are you sure you want to delete your profile image?')) {
+      const placeholderImage = new Image();
+      placeholderImage.src = '/img/profile-default.png'; // Replace with your placeholder image path
+      placeholderImage.onload = function() {
+        profileImage.style.width = 78 + 'px';
+        profileImage.style.height = 74 + 'px';
+        profileImage.style.borderRadius = 100 + '%';
+        profileImage.src = '/img/profile-default.png';
+        profileImage.classList.add('default-profile-image'); // Add class for default styles
+      };
+    }
+  }
+
+  // Add click event listener to the update button
+  updateButton.addEventListener('click', () => {
+    // Create a hidden file input element (optional, can be triggered differently)
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'image/*';
+    fileInput.style.display = 'none';
+
+    // Simulate file selection click (replace with a more user-friendly approach)
+    fileInput.click();
+
+    // Add change event listener to the file input (optional)
+    fileInput.addEventListener('change', handleImageUpload);
+
+    // Add the file input element to the DOM (optional, can be placed elsewhere)
+    document.body.appendChild(fileInput);
+  });
+
+  // Add click event listener to the delete button
+  deleteButton.addEventListener('click', handleImageDelete);
+
+  // Profile img
+
+
+
+
+
+
+
 });

@@ -7,7 +7,8 @@ module.exports = {
     return queryInterface.bulkInsert('users', [
       {
         user_uuid: uuidv4(),
-        username: 'felix',
+        full_name: 'Abdoulanziz Ally',
+        email: 'abdoulanzizally@outlook.com',
         password: '$2b$10$BfxM7ko7ILI8XPfMA95WL.tTWsfuzV5L6cKfwc8K3RazQVCuywrAy',
         role_id: 3,
         created_at: new Date(),

@@ -2,15 +2,16 @@ require("dotenv").config();
 const bcrypt = require('bcrypt');
 const { User } = require('../models');
 
-const { ADMIN_USERNAME, ADMIN_PASSWORD } = process.env;
+const { ADMIN_FULLNAME, ADMIN_EMAIL, ADMIN_PASSWORD } = process.env;
 
 async function initializeAdmin() {
   try {
-    const adminUsername = ADMIN_USERNAME;
+    const adminFullName = ADMIN_FULLNAME;
+    const adminEmail = ADMIN_EMAIL;
     const adminPassword = ADMIN_PASSWORD;
     
     // Check if the admin user already exists
-    const existingAdmin = await User.findOne({ where: { username: adminUsername } });
+    const existingAdmin = await User.findOne({ where: { email: adminEmail } });
     if (existingAdmin) {
       console.log('Admin user already exists. Skipping creation.');
       return;
@@ -21,7 +22,8 @@ async function initializeAdmin() {
 
     // Create the initial admin user
     await User.create({
-      username: adminUsername,
+      fullName: adminFullName,
+      email: adminEmail,
       password: hashedPassword,
       roleId: 2,
       accountStatus: "active"

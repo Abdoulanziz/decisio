@@ -26,11 +26,17 @@ module.exports = (sequelize, DataTypes) => {
         unique: true,
         field: 'user_uuid',
       },
-      username: {
+      fullName: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
-        field: 'username',
+        field: 'full_name',
+      },
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+        field: 'email',
       },
       password: {
         type: DataTypes.STRING,
@@ -58,6 +64,27 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         allowNull: true,
         field: 'last_login',
+      },
+      passwordResetToken: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        field: 'password_reset_token',
+      },
+      passwordResetTokenExpiry: {
+        type: DataTypes.DATE,
+        allowNull: true,
+        field: 'password_reset_token_expiry',
+      },
+      emailVerificationToken: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        field: 'email_verification_token',
+      },
+      emailVerified: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+        allowNull: false,
+        field: 'email_verified',
       },
       createdAt: {
         type: DataTypes.DATE,

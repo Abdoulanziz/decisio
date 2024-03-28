@@ -15,10 +15,14 @@ module.exports = {
         allowNull: false,
         unique: true,
       },
-      username: {
+      full_name: {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true,
+      },
+      email: {
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       password: {
         type: Sequelize.STRING,
@@ -40,8 +44,24 @@ module.exports = {
       },
       last_login: {
         type: Sequelize.DATE,
-        field: 'last_login',
         allowNull: true,
+      },
+      password_reset_token: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      password_reset_token_expiry: {
+        type: Sequelize.DATE,
+        allowNull: true,
+      },
+      email_verification_token: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      email_verified: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+        allowNull: false,
       },
       created_at: {
         allowNull: false,
