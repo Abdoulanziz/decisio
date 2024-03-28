@@ -131,7 +131,7 @@
 .navbar-nav-notification-icon {
   padding: .2rem;
   border-radius: 100%;
-  inline-size: 34px;
+  inline-size: 33px !important;
   block-size: 34px;
 }
 
