@@ -16,7 +16,7 @@ const checkUserRoleId = (roleId) => {
     if (user.roleId === roleId) {
       next();
     } else {
-      res.redirect('/page/patients');
+      res.redirect('/web/home');
     }
   };
 }

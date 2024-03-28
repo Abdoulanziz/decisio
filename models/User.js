@@ -54,6 +54,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         field: 'profile_completion_status',
       },
+      accountType: {
+        type: DataTypes.ENUM('individual', 'organization'),
+        allowNull: false,
+        field: 'account_type',
+      },
       accountStatus: {
         type: DataTypes.ENUM('active', 'suspended'),
         defaultValue: 'suspended',

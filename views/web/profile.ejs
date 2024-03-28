@@ -52,7 +52,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="index.html">
+                            <a href="/auth/signout">
                                 <span class="flex">
                                     <span class="flex"><img src="/img/logout.png" alt="" class="icon"><span class="">Signout</span></span>
                                 </span>
@@ -101,7 +101,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="index.html">
+                            <a href="/auth/signout">
                                 <span class="flex">
                                     <span class="flex"><img src="/img/logout.svg" alt="" class="icon"><span class="menu-item-label">Signout</span></span>
                                 </span>
@@ -118,7 +118,7 @@
                 <div class="navbar navbar-authen">
                     <nav class="navbar-nav">
                         <img src="/img/bell-ring.png" alt="Notification icon" class="navbar-nav-notification-icon" style="inline-size: 40px;">
-                        <img src="/img/avatar.png" alt="Profile avatar" class="navbar-nav-profile-avatar">
+                        <img src="/img/profile-default.png" alt="Profile avatar" class="navbar-nav-profile-avatar">
                     </nav>
                 </div>
 
@@ -132,7 +132,7 @@
                             <img src="/img/bell-ring.svg" alt="Notification icon" class="navbar-nav-notification-icon" style="inline-size: 40px;">
                             <div class="user-avatar dropdown">
                                 <div class="dropdown-avatar flex">
-                                    <img src="/img/avatar.png" alt="user avatar" class="avatar navbar-nav-profile-avatar" id="toggle-dropdown">
+                                    <img src="/img/profile-default.png" alt="user avatar" class="avatar navbar-nav-profile-avatar" id="toggle-dropdown">
                                     <i class="ti-angle-down" id="toggle-dropdown"></i>
                                 </div>
                                 <div class="dropdown-menu" id="dropdown-menu">
@@ -158,11 +158,11 @@
                     <h3>My Profile</h3>
                   </div>
                   <div class="profile-avatar">
-                    <img src="/img/avatar.png" alt="" />
+                    <img src="/img/profile-default.png" alt="" style="border-radius: 100%;"/>
                   </div>
                   <div class="profile-text">
-                    <h4>Ally Abdoulanziz</h4>
-                    <h6>abdoulanzizally@outlook.com</h6>
+                    <h4><%= data.user.fullName %></h4>
+                    <h6><%= data.user.email %></h6>
                   </div>
                   <div class="profile-stats">
                     <div class="stat-container">
@@ -186,7 +186,7 @@
                 <div class="profile-desc">
                   <div class="profile-desc-wrapper">
                     <div class="profile-desc-top">
-                      <h3>My slogan</h3>
+                      <h3>Day's quote</h3>
                       <h6>Live a life of silent happiness</h6>
                     </div>
                     <div class="profile-desc-mid">
@@ -198,35 +198,30 @@
                   </div>
                 </div>
               </div>
+              <form class="account-settings-form" action="/api/v1/profile/personal-details" method="post">
               <div class="personal-settings">
                 <div class="account-settings">
                   <div class="account-settings-heading">
                     <h3>Personal Details</h3>
                   </div>
-                  <form class="account-settings-form">
                     <div class="form-group-flex">
                       <div class="form-group">
                         <label for="first-name">Full Name</label>
-                        <input id="first-name" type="text" />
+                        <input id="first-name" type="text" value="<%= data.user.fullName %>" disabled/>
                       </div>
                       <div class="form-group">
-                        <label for="first-name">Occupation</label>
-                        <input id="first-name" type="text" />
+                        <label for="occupation">Occupation</label>
+                        <input id="occupation" name="occupation" type="text" value="<%= data.profile ? data.profile.occupation : '' %>" />
                       </div>
                       <div class="form-group">
-                        <label for="first-name">Location</label>
-                        <input id="first-name" type="text" />
+                        <label for="location">Location</label>
+                        <input id="location" name="location" type="text"  value="<%= data.profile ? data.profile.location : '' %>" />
                       </div>
                     </div>
                     <div class="textarea-group">
-                      <label for="personal-interests">Bio</label>
-                      <textarea id="personal-interests"></textarea>
+                      <label for="bio">Bio</label>
+                      <textarea id="bio" name="bio"><%= data.profile ? data.profile.bio : '' %></textarea>
                     </div>
-
-                    <div class="button-container">
-                      <button class="btn submit-btn">Save</button>
-                    </div>
-                  </form>
                 </div>
 
 
@@ -234,106 +229,85 @@
                   <div class="account-settings-heading">
                     <h3>Interests</h3>
                   </div>
-                  <form class="account-settings-form">
                     <div class="textarea-group">
-                      <label for="personal-interests">Goals/Objectives</label>
-                      <textarea id="personal-interests"></textarea>
-                    </div>
-                    <div class="textarea-group">
-                      <label for="personal-interests">Collaboration Interests</label>
-                      <textarea id="personal-interests"></textarea>
+                      <label for="goals-objectives">Goals/Objectives</label>
+                      <textarea id="goals-objectives" name="goalsObjectives"><%= data.profile ? data.profile.goalsObjectives : '' %></textarea>
                     </div>
                     <div class="textarea-group">
-                      <label for="personal-interests">Skills & Expertise</label>
-                      <textarea id="personal-interests"></textarea>
+                      <label for="collaboration-interests">Collaboration Interests</label>
+                      <textarea id="collaboration-interests" name="collaborationInterests"><%= data.profile ? data.profile.collaborationInterests : '' %></textarea>
                     </div>
-
-                    <div class="button-container">
-                      <button class="btn submit-btn">Save</button>
+                    <div class="textarea-group">
+                      <label for="skills-expertise">Skills & Expertise</label>
+                      <textarea id="skills-expertise" name="skillsExpertise"><%= data.profile ? data.profile.skillsExpertise : '' %></textarea>
                     </div>
-                  </form>
                 </div>
 
                 <div class="account-settings">
                   <div class="account-settings-heading">
                     <h3>Skill/Service 1</h3>
                   </div>
-                  <form class="account-settings-form">
                     <div class="textarea-group">
-                      <label for="personal-interests">Level of Proficiency / Description</label>
-                      <textarea id="personal-interests"></textarea>
+                      <label for="skill-service1">Level of Proficiency / Description</label>
+                      <textarea id="skill-service1" name="skillService1"><%= data.profile ? data.profile.skillService1 : '' %></textarea>
                     </div>
-
-                    <div class="button-container">
-                      <button class="btn submit-btn">Save</button>
-                    </div>
-                  </form>
                 </div>
 
                 <div class="account-settings">
                   <div class="account-settings-heading">
                     <h3>Skill/Service 2</h3>
                   </div>
-                  <form class="account-settings-form">
                     <div class="textarea-group">
-                      <label for="personal-interests">Level of Proficiency / Description</label>
-                      <textarea id="personal-interests"></textarea>
+                      <label for="skill-service2">Level of Proficiency / Description</label>
+                      <textarea id="skill-service2" name="skillService2"><%= data.profile ? data.profile.skillService2: '' %></textarea>
                     </div>
-
-                    <div class="button-container">
-                      <button class="btn submit-btn">Save</button>
-                    </div>
-                  </form>
                 </div>
 
                 <div class="account-settings">
                   <div class="account-settings-heading">
                     <h3>Community Engagement</h3>
                   </div>
-                  <form class="account-settings-form">
                     <div class="textarea-group">
-                      <label for="personal-interests">Communication Preferences</label>
-                      <textarea id="personal-interests"></textarea>
+                      <label for="communication-preferences">Communication Preferences</label>
+                      <textarea id="communication-preferences" name="communicationPreferences"><%= data.profile ? data.profile.communicationPreferences : '' %></textarea>
                     </div>
                     <div class="textarea-group">
-                      <label for="personal-interests">Preferred Collaboration Style</label>
-                      <textarea id="personal-interests"></textarea>
+                      <label for="prefered-collaboration-style">Prefered Collaboration Style</label>
+                      <textarea id="prefered-collaboration-style" name="preferedCollaborationStyle"><%= data.profile ? data.profile.preferedCollaborationStyle : '' %></textarea>
                     </div>
-
-                    <div class="button-container">
-                      <button class="btn submit-btn">Save</button>
-                    </div>
-                  </form>
                 </div>
 
 
 
-                <div class="platform-settings">
-                  <div class="platform-settings-heading">
+                <div class="account-settings">
+                  <div class="account-settings-heading">
                     <h3>Social Media Links</h3>
                   </div>
-                  <form class="account-settings-form">
                     <div class="form-group">
-                      <label for="linkedin">Website (Organization)</label>
+                      <label for="website">Website (Organization)</label>
                       <input
-                        id="linkedin"
+                        id="website"
+                        name="website"
+                         value="<%= data.profile ? data.profile.website : '' %>" 
                         type="text"
                         placeholder="E.g. https://www.example.com"
                       />
                     </div>
                     <div class="textarea-group">
-                      <label for="personal-interests">Contact Information</label>
-                      <textarea id="personal-interests"></textarea>
+                      <label for="contact-information">Contact Information</label>
+                      <textarea id="contact-information" name="contactInformation"><%= data.profile ? data.profile.contactInformation: '' %></textarea>
                     </div>
 
                     <div class="button-container">
                       <button class="btn submit-btn">Save</button>
                     </div>
-                  </form>
-                </div>
-
-
+                  </div>
+                  
+                  
               </div>
+                
+              </form>
+
             </div>
           </div>
         </div>

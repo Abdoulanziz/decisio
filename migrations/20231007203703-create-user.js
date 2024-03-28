@@ -37,6 +37,10 @@ module.exports = {
         defaultValue: 'incomplete',
         allowNull: false,
       },
+      account_type: {
+        type: Sequelize.ENUM('individual', 'organization'),
+        allowNull: false,
+      },
       account_status: {
         type: Sequelize.ENUM('active', 'suspended'),
         defaultValue: 'suspended',

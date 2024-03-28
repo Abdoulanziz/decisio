@@ -85,7 +85,7 @@
                 <div class="signin-content" style="margin-block-start: 73.58px;">
                     <div class="auth-container">
                         <h2>Signin Form</h2>
-                        <form>
+                        <form action="/auth/signin" method="post" >
                             <label for="email">Email:</label>
                             <input type="email" id="email" name="email" required>
                             
@@ -180,11 +180,11 @@
             }
         }
 
-        const signinBtn = document.querySelector("#signin-btn");
-        signinBtn.addEventListener("click", event => {
-            event.preventDefault();
-            location.href = "/web/home";
-        })
+        // const signinBtn = document.querySelector("#signin-btn");
+        // signinBtn.addEventListener("click", event => {
+        //     event.preventDefault();
+        //     location.href = "/web/home";
+        // })
 
     </script>
 

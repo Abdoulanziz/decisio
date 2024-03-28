@@ -12,9 +12,9 @@ const {
 } = require("../controllers/webController");
 
 
-router.get("/home", renderHome);
-router.get("/profile", renderProfile);
-router.get("/activities", renderActivities);
-router.get("/settings", renderSettings);
+router.get("/home", requireLogin, renderHome);
+router.get("/profile", requireLogin, renderProfile);
+router.get("/activities", requireLogin, renderActivities);
+router.get("/settings", requireLogin, renderSettings);
 
 module.exports = router;

@@ -1161,13 +1161,16 @@
   flex: 2;
   inline-size: 100%;
   border-inline-start: 1px solid #eeeded;
+  padding-inline: 1.4rem;
 }
 
 .account-settings {
   border-block-end: 1px solid #eeeded;
+  padding-block-end: .6rem;
 }
 
 .account-settings-heading {
+  all: unset;
   margin: 1.4rem;
 }
 
@@ -1182,6 +1185,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: .4rem;
 }
 
 .account-settings-form .form-group {
@@ -1726,6 +1730,31 @@
   }
 
 
+  .personal-settings {
+    flex: 2;
+    inline-size: 100%;
+    border-inline-start: none;
+    padding-inline: 0;
+  }
+
+  .account-settings-form {
+    margin: 0 auto;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    padding: 0;
+  }
+
+  .account-settings {
+    padding-inline: 1rem;
+  }
+
+  .account-settings-heading {
+    all: unset;
+    display: block;
+    inline-size: 100% !important;
+    text-align: left;
+    margin-block: .8rem;
+  }
 
   .settings-card {
     margin-inline: .6rem;

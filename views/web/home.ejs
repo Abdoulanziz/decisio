@@ -52,7 +52,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="index.html">
+                            <a href="/auth/signout">
                                 <span class="flex">
                                     <span class="flex"><img src="/img/logout.png" alt="" class="icon"><span class="">Signout</span></span>
                                 </span>
@@ -101,7 +101,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="index.html">
+                            <a href="/auth/signout">
                                 <span class="flex">
                                     <span class="flex"><img src="/img/logout.svg" alt="" class="icon"><span class="menu-item-label">Signout</span></span>
                                 </span>
@@ -118,7 +118,7 @@
                 <div class="navbar navbar-authen">
                     <nav class="navbar-nav">
                         <img src="/img/bell-ring.png" alt="Notification icon" class="navbar-nav-notification-icon" style="inline-size: 40px;">
-                        <img src="/img/avatar.png" alt="Profile avatar" class="navbar-nav-profile-avatar">
+                        <img src="/img/profile-default.png" alt="Profile avatar" class="navbar-nav-profile-avatar">
                     </nav>
                 </div>
 
@@ -132,7 +132,7 @@
                             <img src="/img/bell-ring.svg" alt="Notification icon" class="navbar-nav-notification-icon" style="inline-size: 40px;">
                             <div class="user-avatar dropdown">
                                 <div class="dropdown-avatar flex">
-                                    <img src="/img/avatar.png" alt="user avatar" class="avatar navbar-nav-profile-avatar" id="toggle-dropdown">
+                                    <img src="/img/profile-default.png" alt="user avatar" class="avatar navbar-nav-profile-avatar" id="toggle-dropdown">
                                     <i class="ti-angle-down" id="toggle-dropdown"></i>
                                 </div>
                                 <div class="dropdown-menu" id="dropdown-menu">
@@ -159,24 +159,26 @@
                                     <p><i class="fa fa-times" aria-hidden="true"></i></p>
                                 </div>
                                 <div class="post-container-content">
+                                    <form action="/api/v1/posts" method="post">
                                     <div class="post-container-img-and-textarea">
                                         <div class="img">
-                                            <img src="/img/avatar.png">
+                                            <img src="/img/profile-default.png">
                                         </div>
                                         <div class="textarea">
-                                            <textarea placeholder="What are your thoughts?"></textarea>
+                                            <textarea placeholder="What are your thoughts?" name="description"></textarea>
                                         </div>
                                     </div>
                                     <div class="post-container-ctas">
                                         <button class="btn submit-btn">Post</button>
                                     </div>
+                                    </form>
                                 </div>
                             </div>
 
-                            <div class="post-card">
+                            <!-- <div class="post-card">
                                 <div class="post-header">
                                     <div class="user-avatar">
-                                        <img src="/img/avatar.png" alt="User Avatar">
+                                        <img src="/img/profile-default.png" alt="User Avatar">
                                     </div>
                                     <div class="user-info">
                                         <h3 class="user-name">Ally Abdoulanziz</h3>
@@ -229,7 +231,39 @@
                                         <div class="stat"><span class="stat-number">1.1k</span>  <img src="/img/post-icons/repost.svg" alt="" class="stat-icon"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+
+
+                            <% if (data.posts) { %>
+                            <% data.posts.reverse().forEach(post => { %>
+                                <div class="post-card">
+                                <div class="post-header">
+                                    <div class="user-avatar">
+                                    <img src="/img/profile-default.png" alt="User Avatar" style="border: 1px solid #ccc;">
+                                    </div>
+                                    <div class="user-info">
+                                    <h3 class="user-name"><%= post.User.fullName %></h3>
+                                    <p class="post-time">Posted <%= post.createdAt.toDateString() %></p>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <p class="post-text">
+                                    <%= post.description %>
+                                    </p>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="post-stats">
+                                    <div class="stat"><span class="stat-number"><%= 0 %></span> <img src="/img/post-icons/like.svg" alt="" class="stat-icon"></div>
+                                    <div class="stat"><span class="stat-number"><%= 0 %></span> <img src="/img/post-icons/comment.svg" alt="" class="stat-icon"></div>
+                                    <div class="stat"><span class="stat-number"><%= 0 %></span> <img src="/img/post-icons/repost.svg" alt="" class="stat-icon"></div>
+                                    </div>
+                                </div>
+                                </div>
+                            <% }) %>
+                            <% } %>
+
+
+
 
                         </div>
                         <div class="recent-updates">
@@ -275,18 +309,18 @@
             <div class="bottom-nav" id="bottom-nav">
                 <div class="wrapper flex">
                     <div class="items flex">
-                        <div class="item flex nav-cta">
+                        <a href="/web/home" class="item flex nav-cta">
                             <span class="cta"><img class="cta-icon icon" src="/img/home.png" /></span>
                             <span class="title">Home</span>
-                        </div>
-                        <div class="item flex nav-cta">
+                        </a>
+                        <a href="/web/profile" class="item flex nav-cta">
                             <span class="cta"><img class="cta-icon icon" src="/img/user.png" /></span>
-                            <span class="title">Explore</span>
-                        </div>
-                        <div class="item flex nav-cta">
+                            <span class="title">Profile</span>
+                        </a>
+                        <a href="/web/activites" class="item flex nav-cta">
                             <span class="cta"><img class="cta-icon icon" src="/img/interface.png" /></span>
-                            <span class="title">Networks</span>
-                        </div>
+                            <span class="title">Explore</span>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -85,12 +85,12 @@
                 <div class="signup-content" style="margin-block-start: 73.58px;">
                     <div class="auth-container">
                         <h2>Signup Form</h2>
-                        <form>
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required>
+                        <form action="/auth/signup" method="post" >
+                            <label for="full-name">Full Name:</label>
+                            <input type="text" id="full-name" name="fullName" required>
 
-                            <label for="type">Account type:</label>
-                            <select id="type" name="type">
+                            <label for="account-type">Account type:</label>
+                            <select id="account-type" name="accountType">
                                 <option value="individual">Individual</option>
                                 <option value="organization">Organization</option>
                             </select>

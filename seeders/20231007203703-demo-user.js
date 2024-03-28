@@ -11,6 +11,7 @@ module.exports = {
         email: 'abdoulanzizally@outlook.com',
         password: '$2b$10$BfxM7ko7ILI8XPfMA95WL.tTWsfuzV5L6cKfwc8K3RazQVCuywrAy',
         role_id: 3,
+        account_type: 'individual',
         created_at: new Date(),
         updated_at: new Date(),
       }

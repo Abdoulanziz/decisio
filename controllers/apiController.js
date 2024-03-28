@@ -4,6 +4,8 @@ const models = require('../models');
 
 const { 
   User,
+  Profile,
+  Post,
   AuditLog,
 } = require('../models');
 
@@ -247,10 +249,79 @@ const fetchAuditLogs = async (req, res) => {
   }
 };
 
+
+
+
+
+const createPersonalDetails = async (req, res) => {
+  try {
+    // Extract user data from the request body
+    const { occupation, location, bio, goalsObjectives, collaborationInterests, skillsExpertise, skillService1, skillService2, communicationPreferences, preferedCollaborationStyle, website, contactInformation } = req.body;
+
+    // Check if the user already has a profile record
+    let existingProfile = await Profile.findOne({ where: { userId: req.session.user.userId } });
+
+    if (existingProfile) {
+      // Update the existing profile record
+      existingProfile = await existingProfile.update({ occupation, location, bio, goalsObjectives, collaborationInterests, skillsExpertise, skillService1, skillService2, communicationPreferences, preferedCollaborationStyle, website, contactInformation });
+
+      // Create an audit log for the profile update
+      await createAuditLog('Profile', existingProfile.profileId, 'UPDATE', {}, existingProfile.dataValues, req.session.user.userId);
+    } else {
+      // Create a new profile record in the database
+      const newProfile = await Profile.create({ userId: req.session.user.userId, occupation, location, bio, goalsObjectives, collaborationInterests, skillsExpertise, skillService1, skillService2, communicationPreferences, preferedCollaborationStyle, website, contactInformation });
+
+      // Create an audit log for the profile creation
+      await createAuditLog('Profile', newProfile.profileId, 'CREATE', {}, newProfile.dataValues, req.session.user.userId);
+    }
+
+    // Redirect the user to the home page
+    res.redirect("/web/profile");
+
+  } catch (error) {
+    // Log out the error to the console
+    console.error('Error creating/updating profile info:', error);
+
+    // Respond with the error to the client
+    return res.status(500).json({ message: 'Internal Server Error' });
+  }  
+}
+
+const createPost = async (req, res) => {
+  try {
+    // Extract user data from the request body
+    const { description } = req.body;
+
+    
+      // Create a new post record in the database
+      const newPost = await Post.create({ userId: req.session.user.userId, description });
+
+      // Create an audit log for the post creation
+      await createAuditLog('Post', newPost.postId, 'CREATE', {}, newPost.dataValues, req.session.user.userId);
+
+    // Redirect the user to the home page
+    res.redirect("/web/home");
+
+  } catch (error) {
+    // Log out the error to the console
+    console.error('Error creating/updating post info:', error);
+
+    // Respond with the error to the client
+    return res.status(500).json({ message: 'Internal Server Error' });
+  }  
+}
+
+
+
 module.exports = { 
   checkAPIStatus, 
   createUser, 
   updateUser,
   fetchUsers,
   fetchAuditLogs,
+
+
+
+  createPersonalDetails,
+  createPost,
 };

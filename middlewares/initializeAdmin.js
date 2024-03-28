@@ -23,6 +23,7 @@ async function initializeAdmin() {
     // Create the initial admin user
     await User.create({
       fullName: adminFullName,
+      accountType: "individual",
       email: adminEmail,
       password: hashedPassword,
       roleId: 2,
